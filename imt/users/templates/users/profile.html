@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='form1'>
+    <div class="reggt">PROFILE</div>
+    <div class="row my-3 p-3">
+        <img class="rounded-circle account-img" src="{{ profile.avatar.url }} " style="cursor: pointer;"/>
+    </div>
+    {% if u_form.errors %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <div id="form_errors">
+                {% for key, value in u_form.errors.items %}
+                    <strong>{{ value }}</strong>
+                {% endfor %}
+            </div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+    <div class="form-content">
+        <div class="username"><div class="text">Username:{{profile.user}}</div></div>
+        <br>
+        <div class='email'><div class="text">Email:{{profile.user.email}}</div></div>
+        <br>
+        
+        <div class="email"><div class="text"><a href="{%url 'posts' user_id=profile.user.id%}">POSTS</a></div></div>
+        <br>
+        <div class="email"><div class="text"><a href="{%url 'menu' user_id=profile.user.id%}">MENU</a></div></div>
+    </div>
+</div>
+{% endblock content %}

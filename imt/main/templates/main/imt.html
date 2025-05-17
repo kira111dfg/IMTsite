@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="imtt">{{i.get_imt}}</div>
+
+<div class='wrap3'></div>
+{% for low in lows %}
+{% if low.cat.name == 'low' and i.get_imt > 30%}
+<div class='title3'><a href="{{low.get_absolute_url}}">{{low.title}}</a></div>
+{% endif %}
+{% endfor %}
+
+{% for midl in midls %}
+{% if midl.cat.name == 'midl' and i.get_imt >= 18 and i.get_imt < 30%}
+<div class='title3'><a href="{{midl.get_absolute_url}}">{{midl.title}}</a></div>
+{% endif %}
+{% endfor %}
+
+{% for high in highs %}
+{% if high.cat.name == 'high' and i.get_imt < 18 %}
+<div class='title3'><a href="{{high.get_absolute_url}}">{{high.title}}</a></div>
+{% endif %}
+{% endfor %}
+
+
+
+{%if i.get_imt < 18 %}
+<div class='title3'><a href ="http://127.0.0.1:8000/category1/high/" >VIEW ALL IN THAT CALORIES</a></div>
+{% elif i.get_imt >= 18 and i.get_imt < 30%}
+<div class='title3'><a href ="http://127.0.0.1:8000/category1/midl/" >VIEW ALL IN THAT CALORIES</a></div>
+{% elif i.get_imt > 30%}
+<div class='title3'><a href ="http://127.0.0.1:8000/category1/low/" >VIEW ALL IN THAT CALORIES</a></div>
+{% endif %}
+
+<div class='title3'><a href ="http://127.0.0.1:8000/dietary/" >VIEW ALL DIETARIES</a></div>
+</div>
+
+{% endblock content %}

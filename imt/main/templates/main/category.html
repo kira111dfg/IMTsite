@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for dish in dish_category %}
+<div class="dish">
+<a href="{{dish.get_absolute_url}}"><div class='title1'>{{dish.title}}</div></a>
+<img src="{{dish.img.url}}" class="imgList" alt="" >
+</div>
+{% endfor %}
+{% endblock content %}

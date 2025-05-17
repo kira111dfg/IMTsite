@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='wrapper'>
+    <div class="all">
+    {% for post in dishes %}
+    <div class="diet">
+        <a href="{{post.get_absolute_url}}"><div class='posttitle'>{{post.title}}</div></a>
+        {% if post.img %}
+        <img src="{{post.img.url}}" class="imgListt" alt="" >
+        {% endif %}
+        
+        <div class="fl">
+        {% for f in post.food.all %}
+            <div class='o'>
+            <div class='title2'><a href="{{f.get_absolute_url}}">{{f.title}}</a></div>
+            <img src="{{f.img.url}}" class="imgff" alt="" >
+        </div> 
+        {% endfor %}
+    </div>
+    </div>
+</div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

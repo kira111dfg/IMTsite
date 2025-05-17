@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load imt_tags %}
+
+{% block content %}
+
+<div class="s">
+<div class='search'>
+<form  action="{% url 'search' %}" method='get'>
+    <input type='text' name='q' placeholder="search">
+    <button type='submit'>Search</button>
+</form>
+</div>
+</div>
+
+
+<div class='categories'>
+
+<div class="cat_d2">
+<p>CATEGORIES OF FOOD</p>
+{%get_categories%}
+</div>
+
+<div class='cat_d'>
+<p>CATEGORIES OF DIET</p>
+{%get_categories1%}
+</div>
+</div>
+
+{% endblock content %}

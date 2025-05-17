@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper">
+{% for diet in dietaries %}
+<div class="all">
+
+<div class="diet">
+    <div class='titled'><a href="{{diet.get_absolute_url}}">{{diet.title}}</a></div>
+    
+    <div class="fl">
+        {% for f in diet.food.all %}
+            <div >
+            <div class='title2'><a href="{{f.get_absolute_url}}">{{f.title}}</a></div>
+            <img src="{{f.img.url}}" class="imgf" alt="" >
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
+</div>
+{% endfor %}
+
+
+<div class='footer'>
+{% for page_number in page_obj.paginator.get_elided_page_range %}
+    {% if page_number == page_obj.paginator.ELLIPSIS %}
+        {{page_number}}
+    {% else %}
+        <a href="?page={{ page_number }}"class="{% if page_number == page_obj.number %}current{% endif %}">
+            {{page_number}}
+        </a>
+    {% endif %}
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock content %}

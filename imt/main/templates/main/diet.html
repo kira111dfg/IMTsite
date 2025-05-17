@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class='flex'>
+    <div class="post1">
+        <div class="posttitle">{{diet.title}}</div>
+        
+        <div class="fl">
+        {% for f in diet.food.all %}
+            <div class='o'>
+            <div class='title2'><a href="{{f.get_absolute_url}}">{{f.title}}</a></div>
+            <img src="{{f.img.url}}" class="imgf" alt="" >
+        </div> 
+        {% endfor %}
+    </div>
+
+        
+    <a href="{{diet.cat.get_absolute_url}}"><div class='dietc'>{{diet.cat}}</div></a>
+    <a href="{% url 'users:profile' user_pk=diet.author.pk %}"><div class='dieta'>{{diet.author}}</div></a>
+    
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,7 @@
+{% for cat in cats %}
+     <div class="cat">
+     <p><li class='cat2'><a href="{{ cat.get_absolute_url }}">{{cat.name}}</a></li></p>
+     
+ </div>
+     
+{% endfor %}

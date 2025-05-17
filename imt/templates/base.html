@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" href="{% static 'css/base.css' %}" rel="stylesheet" />
+   
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+          <div class = "title">CALORIE SITE</div>
+          <ul class = "menu">
+              <li><a href = "http://127.0.0.1:8000/counter/">YOUR IMT</a></li>
+              
+              <li><a href = "http://127.0.0.1:8000/dishes/">FOOD</a></li>
+              
+              
+              <li><a href ="http://127.0.0.1:8000/dietary/" >DIETARY</a></li>
+
+              <li><a href = "/">HOME</a></li>
+          </ul>
+
+          <ul class="reglog">
+
+          <li class="reg"><a href="{% url 'users:register' %}">REGISTRETION</a></li>
+
+          <li>{% if user.is_authenticated %}
+          <form id="frm_logout" method="post" action="{% url 'users:logout' %}">     {% csrf_token %}     <a  href="javascript:$('#frm_logout').submit();" class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700">LOGOUT</a> </form>
+        </form>
+          {% else %}
+            <a class='login' href="{% url 'users:login' %}">LOGIN</a>
+          {% endif %}</li>
+
+          <li class="reg"><a href="{% url 'add_post' %}">ADD DISH</a></li>
+          <li class="reg"><a href="{% url 'add_diet' %}">ADD DIET</a></li>
+          {% if user.is_authenticated %}
+          <li>  
+            <a class="profile" href="{% url 'users:profile_update'  %}">YOUR PROFILE</a>  
+        </li>
+        {%endif%}
+
+        </ul>
+      </header>
+    </div>
+    {% block content %}{% endblock content %}
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>

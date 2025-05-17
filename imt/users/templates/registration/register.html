@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="login-page">
+  <div class="regt">REGISTRATION</div>
+    <div class="form">
+      <form class="login-form" action="{%url 'users:register'%}" method="post">
+        {% csrf_token %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <button type='submit'>SIGN UP</button>
+        <p class="message">Already Registered? <a href="{% url 'users:login' %}">Login</a></p>
+      </form>
+    </div>
+  </div>
+  {% endblock content %}

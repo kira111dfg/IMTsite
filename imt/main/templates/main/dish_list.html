@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for dish in dishes %}
+<div class="dish">
+<a href="{{dish.get_absolute_url}}"><div class='title1'>{{dish.title}}</div></a>
+{% if dish.img %}
+<img src="{{dish.img.url}}" class="imgList" alt="" >
+{% endif %}
+
+</div>
+{% endfor %}
+{% endblock content %}
