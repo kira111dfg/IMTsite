@@ -8,6 +8,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import DetailView,ListView,CreateView
 from itertools import chain
 from django.contrib.auth.models import User
+
+
 class Search(ListView):
     template_name='main/search.html'
     context_object_name='dishes'

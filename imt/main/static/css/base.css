@@ -1,658 +1,461 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
+.wrapper, .wrap3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
 
+.all, .dish, .post, .post1, .diet {
+    background: #ffe6f0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
 
-.fform {
-    width: 500px;
+.posttitle, .title1, .titled, .title3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.postr, .ingr {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #555;
+}
+
+.photo {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.imgList, .imgListt, .imgf, .imgff {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(255, 192, 203, 0.4);
+}
+
+.flex {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: pink;
-    margin-left: 510px;
+    padding: 30px;
 }
 
-
-
-h1{
-    text-align: center;
-    color: palevioletred;
-}
-
-
-.title{
-	font-size: 36px;
-	padding-top: 30px;
-	text-align: center;
-    color: palevioletred;
-}
-.menu{
-	list-style: none;
-	position: absolute;
-	top: -3px;
-    font-size: 20px;
-    color:palevioletred;
-}
-
-header{
-	width: 100%;
-	background:pink ;
-	height: 100px;
-    margin: 0;
-}
-
-a{
-    text-decoration: none;
-}
-
-.imgList{
-    width: 350px;
-    height: 350px;
-}
-
-.title1{
-    font-size: 50px;
-    color: palevioletred;
-}
-
-
-
-.categories p{
-    font-size: 50px;
-    color: palevioletred;
-}
-
-.field{
-    font-size: 70px;
-    background-color: rgb(255, 208, 216);
-    align-items: center;
-}
-
-.field input{
-   
-    height: 30px;
-    width: 100px;
-
-}
-
-.field p{
-    color: rgb(249, 171, 184);
-}
-
-.btn {
-    background-color: rgb(255, 208, 216);
-    font-size: 30px;
-    color: rgb(249, 171, 184);
-    border: none;
-    border-radius: 10px;
-}
-
-
-.cat{
-    font-size: 60px;
-    background-color: pink;
-    width: 400px;
-    align-items: center;
-    color: palevioletred;
-
-}
-
-.cat2{
-    margin-left: 10px;
-}
-
-a{
-    color: palevioletred;
-}
-
-.dish{
-    float: left;
-    margin-left: 20px;
-    background-color: pink;
-    margin-top: 20px;
-}
-
-
-.flex{
-    display: grid; 
-    place-items:center; 
-}
-
-
-.post{
-    width: 900px;
-    height: 600px;
-    background-color:pink;
-    align-items: center;
-    margin-top: 50px;
-    position: relative;
-}
-
-
-.posttitle{
-    font-size: 50px;
-    color: palevioletred;
-    text-align:center;
-
-}
-
-.postr{
-    font-size: 20px;
-    color: palevioletred;
-    word-break: break-all;
-}
-
-.ingr{
-    font-size: 20px;
-    color: palevioletred;
-    word-break: break-all;
-    padding-left:160px ;
-}
-
-.photo{
-    height: 350px;
+.fl {
     display: flex;
-}
-
-
-.posti{
-    width:200px;
-    height: 200px;
-}
-
-.post div:not(:last-child):not(:first-child){
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.postc{
-    font-size: 25px;
-    color: palevioletred;
-    position: absolute;
-    bottom: 0;
-    background-color: rgb(248, 164, 192);
-    right: 0;
-    margin-bottom: 5px;
-    margin-right: 20px;
-}
-.posta{
-    font-size: 25px;
-    color: palevioletred;
-    position: absolute;
-    bottom: 0;
-    background-color: rgb(248, 164, 192);
-    left: 0;
-    margin-bottom: 5px;
-    margin-left: 20px;
-}
-.imtt{
-    font-size: 60px;
-    color: palevioletred;
-    text-align: center;
-}
-
-.fl{
-    display: flex ;
     flex-wrap: wrap;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    max-width: 1355px;
-    max-height: 750px;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-.diet{
-    float: left;
-    margin-left: 20px;
-    background-color: pink;
-    margin-top: 20px;
-
-}
-
-.imgf{
-    width: 250px;
-    height: 250px;
-    margin-left: 20px;
-}
-
-.title2{
-    margin-left: 20px;
-    font-size: 20px;
-}
-
-.titled{
+.o {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.2);
     text-align: center;
-    font-size: 40px;
 }
 
-.post1{
-
-    background-color:pink;
-    align-items: center;
-    margin-top: 50px;
-    position: relative;
+.title2 {
+    font-size: 1rem;
+    color: #e91e63;
+    margin-bottom: 5px;
 }
 
-.dietc{
-    font-size: 25px;
-    color: palevioletred;
-    position: absolute;
-    top: 2%;
-    background-color: rgb(248, 164, 192);
-    right: 2%;
-
+.title2 a {
+    text-decoration: none;
+    color: #e91e63;
 }
 
-.dieta{
-    font-size: 25px;
-    color: palevioletred;
-    position: absolute;
-    top: 2%;
-    background-color: rgb(248, 164, 192);
-    left: 2%;
-
+.title2 a:hover {
+    text-decoration: underline;
 }
 
-.title3{
-    font-size: 60px;
+.cat, .categories, .cat_d, .cat_d2 {
+    margin: 20px;
+    padding: 15px;
+    background: #fff5fa;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(255, 182, 193, 0.2);
 }
 
-.cat_d{
-    margin-left: 300px;
+.cat2 a, .dietc, .dieta, .postc, .posta {
+    text-decoration: none;
+    color: #c2185b;
+    font-weight: 500;
 }
 
-.categories{
-    display: flex;
+.cat2 a:hover {
+    color: #ad1457;
+    text-decoration: underline;
 }
 
+.search {
+    text-align: center;
+    margin: 30px auto;
+}
 
+.search input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #f8bbd0;
+    border-radius: 20px;
+    outline: none;
+}
 
+.search button {
+    padding: 10px 20px;
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-.wrapper{
-    min-height: 100%;
+.search button:hover {
+    background-color: #ec407a;
 }
 
 .footer {
-    background-color: pink;
-     position: fixed;
-     right: 0;
-     bottom: 0;
-     text-align: center; 
-     width: 100%;   
-     font-size: 19px;
-  font-weight: bold;
-    color: #fafaff;  
-   }
-
-.search {
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    width: 280px;
-}
-
-
-.search input{
-    width: 200px;
-    height: 30px;
-}
-
-.s{
-    display: flex;
-    justify-content: center;
-}
-
-.search button{
-    background-color: rgb(255, 208, 216);
-    color: rgb(249, 171, 184);
-    border: none;
-    border-radius: 10px;
-}
-
-.wrap1{
-    display: flex;
-    min-width: 1500px;
-    position: relative;
-    max-width: 2000px;
-}
-
-.post2{
-    margin-right: 20px;
-    background-color:pink;
-    align-items: center;
-    margin-top: 50px;
-    position: relative;
-    max-width: 2000px;
-
-}
-.dietcc{
-    font-size: 25px;
-    color: palevioletred;
-    position: absolute;
-    bottom: 0%;
-    background-color: rgb(248, 164, 192);
-    right: 2%;
-
-}
-.imgff{
-    width: 223px;
-    height: 223px;
-    margin-left: 20px;
-}
-.fl{
-    display: flex ;
-    flex-wrap: wrap;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    max-width: 1900px;
-    max-height: 750px;
-
-}
-
-
-
-.wrap3{
-    border-color: pink;
-    max-width: 1500px;
-    max-height: 1000px;
-    height: 100%;
-    width: 100%;
-}
-
-
-button:hover { color: pink; } 
-
-a:hover { color: rgb(243, 94, 119); } 
-
-.imgListt{
-    width: 250px;
-    height: 250px;
-}
-
-
-
-.reglog{
-	list-style: none;
-	position: absolute;
-	top: -3px;
-    font-size: 16px;
-    color:palevioletred;
-    margin-left: 1300px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.login-page {
-  width: 360px;
-    padding-top: 25px;
-  margin: auto;
-
-}
-.form {
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
- 
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: pink;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-.form button:hover,.form button:active,.form button:focus {
-  background: palevioletred;
-}
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: palevioletred;
-  text-decoration: none;
-}
-.form .register-form {
-  display: none;
-}
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 300px;
-  margin: 0 auto;
-}
-.container:before, .container:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.container .info {
-  margin: 50px auto;
-  text-align: center;
-}
-.container .info h1 {
-  margin: 0 0 15px;
-  padding: 0;
-  font-size: 36px;
-  font-weight: 300;
-  color: #1a1a1a;
-}
-.container .info span {
-  color: #4d4d4d;
-  font-size: 12px;
-}
-.container .info span a {
-  color: #000000;
-  text-decoration: none;
-}
-.container .info span .fa {
-  color: #EF3B3A;
-}
-
-
-.login-form label{
-    color: palevioletred;
-    margin-right: 200px;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.regt{
-    color:palevioletred;
-    font-size: 50px;
     text-align: center;
-
+    margin: 40px 0;
 }
 
-.login-form input{
-    color: palevioletred;
-}
-
-
-.login-form p{
-    text-align: center;
-}
-
-
-
-
-
-
-.form-post label{
-    color: palevioletred;
-    margin-right: 200px;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.form-post select{
-    color: palevioletred;
-    margin-right: 200px;
-    
-}
-
-.form-post input{
-    color: palevioletred;
-
-    
-}
-.form-post input[type=file]::file-selector-button {
-    color: palevioletred;
-  }
-.form-post textarea {
-    color: palevioletred;
-  }
-
-.form-post input[type=number] {
-    color: palevioletred;}
-
-.search input{
-    color: palevioletred;
-}
-
-.form1 {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 400px;
- 
-    margin: 0 auto 100px;
-    padding: 10px 45px 45px 45px;
-    align-items: center;
-
-   margin-top: 20px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  }
-  .form1 input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
-  .form1 button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: pink;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  .form1 button:hover,.form1 button:active,.form1 button:focus {
-    background: palevioletred;
-  }
-  .form1 .message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
-  }
-  .form1 .message a {
-    color: palevioletred;
+.footer a {
+    padding: 10px 15px;
+    margin: 0 5px;
     text-decoration: none;
-  }
-  .form1 .register-form {
-    display: none;
-  }
+    color: #d63384;
+    background-color: #ffe0ec;
+    border-radius: 8px;
+    font-weight: 500;
+}
 
-.form1 img{
-    margin: 10px auto 20px;
+.footer a.current {
+    background-color: #f48fb1;
+    color: white;
+}
+
+.imtt {
+    font-size: 2rem;
+    text-align: center;
+    color: #ad1457;
+    margin-top: 30px;
+}
+
+
+
+
+
+/* Общие настройки */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #d63384;
+}
+
+a:hover {
+    color: #ad1457;
+}
+
+/* Обёртка */
+.wrap {
+    width: 100%;
+    background: #ffebf0;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+
+/* Заголовок */
+header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Название сайта */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+/* Главное меню */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: #ffd6e3;
+    transition: background 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #f8bbd0;
+}
+
+/* Регистрация / Авторизация / Профиль */
+.reglog {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.reglog li {
+    font-size: 0.95rem;
+}
+
+.reglog a, .reglog .login, .reglog .profile {
+    background-color: #ffb6c1;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.reglog a:hover, .reglog .login:hover, .reglog .profile:hover {
+    background-color: #ec407a;
+}
+
+/* Кнопка logout (внутри формы) */
+form#frm_logout a {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background-color: #f48fb1;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+form#frm_logout a:hover {
+    background-color: #e91e63;
+}
+
+
+
+
+.dish-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dish-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.dish-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #ffe4ec;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dish-item:hover {
+    transform: translateY(-5px);
+}
+
+.imgList {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.title1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff0f5;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.posttitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.postr, .ingr {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.posti img.imgList {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.p {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.postc, .posta {
+    background-color: #ffe4ec;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #c2185b;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.postc:hover, .posta:hover {
+    background-color: #f8bbd0;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff0f5;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+    overflow: hidden;
+}
+
+.posttitle {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 20px;
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.posti img.imgList {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
     display: block;
 }
 
-form input{
-    color: palevioletred;
-}
-form label{
-    color: palevioletred;
-}
-
-.form1 input[type=file]::file-selector-button {
-    color: palevioletred;}
-
-    .reggt{
-        color:palevioletred;
-        font-size: 80px;
-        text-align: center;
-
-       
-    
-    }
-
-.form-content{
-    font-size: 30px;
-    color: palevioletred;
+.ingr, .postr {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
 }
 
-.username{
-    padding-top: 10px;
-    width: 400px;
-    height: 50px;
-    background-color: pink;
+.p {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.postc, .posta {
+    background-color: #ffe4ec;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #c2185b;
     text-align: center;
-    border-radius:10px ;
-    box-shadow: inset;
+    transition: background-color 0.3s ease;
 }
 
-.email{
-    padding-top: 10px;
-    width: 400px;
-    height: 50px;
-    background-color: pink;
-    text-align: center;
-    border-radius:10px ;
-    box-shadow: inset;
-}
-
-.text{
-    margin-top: 4px;
+.postc:hover, .posta:hover {
+    background-color: #f8bbd0;
 }

@@ -1,13 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for dish in dishes %}
-<div class="dish">
-<a href="{{dish.get_absolute_url}}"><div class='title1'>{{dish.title}}</div></a>
-{% if dish.img %}
-<img src="{{dish.img.url}}" class="imgList" alt="" >
-{% endif %}
+<div class="dish-wrapper">
+    {% for dish in dishes %}
+        {% if forloop.first or forloop.counter0|divisibleby:3 %}
+        <div class="dish-row">
+        {% endif %}
 
+        <div class="dish-item">
+            <a href="{{ dish.get_absolute_url }}"><div class='title1'>{{ dish.title }}</div></a>
+            {% if dish.img %}
+            <img src="{{ dish.img.url }}" class="imgList" alt="">
+            {% endif %}
+        </div>
+
+        {% if forloop.counter|divisibleby:3 or forloop.last %}
+        </div>
+        {% endif %}
+    {% endfor %}
 </div>
-{% endfor %}
 {% endblock content %}

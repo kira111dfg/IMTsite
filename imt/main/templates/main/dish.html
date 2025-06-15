@@ -1,22 +1,31 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 <div class='flex'>
-    <div class="post">
-        <div class="posttitle">{{post.title}}</div>
-        <div class='postr'>{{post.recipe}}</div>
+  <div class="post">
+    <div class="posttitle">{{ post.title }}</div>
+    
 
-        <div class="photo">
-        <div class="posti"><img src="{{post.img.url}}" class="imgList" alt="" ></div>
-        <div class="ingr">{{post.ingridients}}</div>
+
+    <div class="photo">
+      
+      <div class="posti">
+        
+    {% if post.img %}
+  <img src="{{ post.img.url }}" class="imgList" alt="Image of {{ post.title }}">
+{% else %}
+  <p>No image available</p>
+{% endif %}
+      </div>
+      
+      <div class="ingr">{{ post.ingridients }}</div>
     </div>
 
-        <div class='p'>
-            <a href="{{post.cat.get_absolute_url}}"><div class='postc'>{{post.cat}}</div></a>
-            <a href="{% url 'users:profile' user_pk=post.author.pk  %}"><div class='posta'>{{post.author}}</div></a>
-        </div>
+    <div class="postr">{{ post.recipe }}</div>
+
+    <div class='p'>
+      <a href="{{ post.cat.get_absolute_url }}"><div class='postc'>{{ post.cat }}</div></a>
+      <a href="{% url 'users:profile' user_pk=post.author.pk  %}"><div class='posta'>{{ post.author }}</div></a>
     </div>
+  </div>
 </div>
-
 {% endblock content %}
